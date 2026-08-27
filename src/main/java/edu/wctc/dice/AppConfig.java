@@ -3,10 +3,7 @@ package edu.wctc.dice;
 import edu.wctc.dice.iface.DiceRoller;
 import edu.wctc.dice.iface.GameInput;
 import edu.wctc.dice.iface.GameOutput;
-import edu.wctc.dice.impl.ConsoleInput;
-import edu.wctc.dice.impl.ConsoleOutput;
-import edu.wctc.dice.impl.PopupInput;
-import edu.wctc.dice.impl.PopupOutput;
+import edu.wctc.dice.impl.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +25,7 @@ public class AppConfig {
 
     @Bean
     public DiceRoller diceRoller(){
-//
+        return new SixSidedDiceRoller();
 //
     }
 }
