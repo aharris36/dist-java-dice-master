@@ -26,6 +26,6 @@ public class AppConfig {
     @Bean
     public DiceRoller diceRoller(){
         return new SixSidedDiceRoller();
-//
+//      return new TwelveSidedDiceRoller();
     }
 }
